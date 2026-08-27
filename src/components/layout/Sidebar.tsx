@@ -75,12 +75,12 @@ export default function Sidebar(){
     const pathname = usePathname();
 
     return(
-        <aside className="fixed left-0 top-0 z-40 flex h-screen w-64 flex-col bg-[#14532D] text-white">
+        <aside className="fixed left-0 top-0 z-40 flex h-screen w-64 flex-col bg-[#064E2A] text-white">
 
             {/* Logo */}
             <div className="flex h-20 items-center gap-3 border-b border-white/10 px-6">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#22C55E]">
-                <Leaf size={22} />
+            <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#22C55E] shadow-sm">
+                <Leaf size={24} />
             </div>
 
             <div>
