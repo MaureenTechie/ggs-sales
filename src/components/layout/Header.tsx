@@ -31,7 +31,7 @@ export default function Header(){
 
                 <div className="flex items-center gap-3">
                     <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#DCFCE7] text-[#14532D]">
-                        <UserCircle size{25} />
+                        <UserCircle size={25} />
                     </div>
 
                     <div>
