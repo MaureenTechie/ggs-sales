@@ -1,3 +1,5 @@
+import SalesOverview from "./SalesOverview";
+
 import {
     ArrowUpRight,
     ArrowDownRight,
@@ -150,70 +152,95 @@ import {
           </div>
         </section>
   
-        {/* Recent invoices */}
-        <section className="overflow-hidden rounded-2xl border bg-white shadow-sm">
-          <div className="flex items-center justify-between border-b px-6 py-5">
-            <div>
-              <h2 className="font-semibold text-gray-800">
-                Recent Invoices
-              </h2>
-  
-              <p className="mt-1 text-xs text-gray-500">
-                Your latest sales invoices
-              </p>
-            </div>
-  
-            <a
+        {/* Sales & Recent invoices */}
+        <div className="grid grid-cols-1 gap-6 xl:grid-cols-2">
+
+          <SalesOverview />
+
+          <section className="overflow-hidden rounded-2xl border bg-white shadow-sm">
+            <div className="flex items-center justify-between border-b px-6 py-5">
+
+              <div>
+                <h2 className="font-semibold text-gray-800">
+                  Recent Invoices
+                </h2>
+
+                <p className="mt-1 text-xs text-gray-500">
+                  Your latest sales invoices
+                </p>
+              </div>
+
+              <a 
               href="/invoices"
               className="text-sm font-semibold text-[#14532D] hover:underline"
-            >
-              View all
-            </a>
-          </div>
-  
-          <div className="overflow-x-auto">
-            <table className="w-full text-left text-sm">
-              <thead className="bg-[#F0FDF4] text-xs uppercase text-[#14532D]">
-                <tr>
-                  <th className="px-6 py-4">Invoice</th>
-                  <th className="px-6 py-4">Customer</th>
-                  <th className="px-6 py-4">Date</th>
-                  <th className="px-6 py-4">Amount</th>
-                  <th className="px-6 py-4">Status</th>
-                </tr>
-              </thead>
-  
-              <tbody className="divide-y">
-                {recentInvoices.map((invoice) => (
-                  <tr
+              >
+                View all
+              </a>
+            </div>
+
+            <div className="overflow-x-auto">
+              <table className="w-full text-left text-sm">
+                <thead className="bg-[#F0FDF4] text-xs uppercase text -[#14532D]">
+                  <tr>
+                    <th className="px-6 py-4">
+                      Invoice
+                    </th>
+
+                    <th className="px-6 py-4">
+                      Customer
+                    </th>
+
+                    <th className="px-6 py-4">
+                      Amount
+                    </th>
+
+                    <th className="px-6 py-4">
+                      Status
+                    </th>
+                  </tr>
+                </thead>
+
+                <tbody className="divide-y">
+                  {recentInvoices.map((invoice) => (
+                    <tr
                     key={invoice.number}
                     className="transition hover:bg-[#F0FDF4]"
-                  >
-                    <td className="px-6 py-4 font-semibold text-[#14532D]">
-                      {invoice.number}
-                    </td>
-  
-                    <td className="px-6 py-4">
-                      {invoice.customer}
-                    </td>
-  
-                    <td className="px-6 py-4 text-gray-500">
-                      {invoice.date}
-                    </td>
-  
-                    <td className="px-6 py-4 font-semibold">
-                      {invoice.amount}
-                    </td>
-  
-                    <td className="px-6 py-4">
-                      <Status status={invoice.status} />
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </section>
+                    >
+                      <td className="px-6 py-4 font-semibold text-[#14532D]">
+                        {invoice.number}
+                      </td>
+
+                      <td className="px-6 py-4">
+                        {invoice.customer}
+                      </td>
+
+                      <td className="px-6 py-4 font-semibold">
+                        {invoice.amount}
+                      </td>
+
+                      <td className="px-6 py-4">
+                        <Status status={invoice.status} />
+                      </td>
+
+                    </tr>
+                  ))}
+
+                </tbody>
+              </table>
+            </div>
+
+            <div className="border-t px-6 py-4">
+              <a
+              href="/invoices"
+              className="text-sm font-semibold text-[#14532D]"
+              >
+                View all invoices →
+              </a>
+            </div>
+
+          </section>
+          
+        </div>
   
       </div>
     );
