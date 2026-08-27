@@ -125,7 +125,7 @@ import {
             Quick Actions
           </h2>
   
-          <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+          <div className="grid grid-cols-2 gap-4 lg:grid-cols-3 xl:grid-cols-5">
             <QuickAction
               icon={FileText}
               title="New Quotation"
@@ -136,6 +136,12 @@ import {
               icon={Receipt}
               title="New Invoice"
               href="/invoices/new"
+            />
+
+            <QuickAction 
+              icon={Receipt}
+              title="New Receipt"
+              href="/receipts/new"
             />
   
             <QuickAction
@@ -239,7 +245,7 @@ import {
             </div>
 
           </section>
-          
+
         </div>
   
       </div>
