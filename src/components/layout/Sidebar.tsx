@@ -8,10 +8,14 @@ import {
     Package,
     FileText,
     Receipt,
+    ScrollText,
+    Truck,
+    ClipboardList,
     BarChart3,
     Settings,
     LogOut,
     Leaf,
+    ChevronRight,
 } from "lucide-react";
 
 const navigation = [
@@ -39,6 +43,26 @@ const navigation = [
         name: "Invoices",
         href: "/invoices",
         icon: Receipt,
+    },
+    {
+        name: "Receipts",
+        href: "/receipts",
+        icon: ScrollText,
+    },
+    {
+        name: "Credit Notes",
+        href: "/credit-notes",
+        icon: ClipboardList,
+    },
+    {
+        name: "Delivery Notes",
+        href: "/delivery-notes",
+        icon: Truck,
+    },
+    {
+        name: "Packing Slips",
+        href: "/packing-slips",
+        icon: ClipboardList,
     },
     {
         name: "Reports",
