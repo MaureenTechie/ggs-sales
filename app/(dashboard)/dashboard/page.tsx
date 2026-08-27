@@ -1,4 +1,4 @@
-import SalesOverview from "./SalesOverview";
+import SalesOverview from "@/src/components/dashboard/SalesOverview";
 
 import {
     ArrowUpRight,
