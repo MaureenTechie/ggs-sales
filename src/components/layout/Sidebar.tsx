@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -14,7 +15,6 @@ import {
   BarChart3,
   Settings,
   LogOut,
-  Leaf,
   ChevronRight,
 } from "lucide-react";
 
@@ -79,10 +79,19 @@ export default function Sidebar() {
 
       {/* Logo */}
       <div className="flex h-20 items-center gap-3 border-b border-white/10 px-6">
-        <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#22C55E] shadow-sm">
-          <Leaf size={24} />
+
+      {/* Logo box - Square */}
+        <div className="flex h-12 w-12  items-center justify-center bg-white p-1 shadow-sm">
+          <Image 
+          src="/Geoda-logo.jpg"
+          alt="Geoda Green Suppliers Limited"
+          width={40}
+          height={40}
+          className="h-full w-full object-contain p-1"
+          />
         </div>
 
+        {/* Company name */}
         <div>
           <h1 className="text-lg font-bold tracking-wide">
             GEODA
@@ -145,9 +154,6 @@ export default function Sidebar() {
       <div className="px-3 pb-3">
         <div className="rounded-2xl bg-[#0A6938] p-3">
           <div className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#22C55E]">
-              <Leaf size={20} />
-            </div>
 
             <div className="min-w-0">
               <p className="truncate text-xs font-semibold">
