@@ -14,7 +14,7 @@ import {
   Users,
 } from "lucide-react";
 
-import {Customer, defaultCustomers} from "@src/lib/customers";
+import {Customer, defaultCustomers} from "@/src/lib/customers";
 
 const formatCurrency = (amount: number) =>
   `KES ${amount.toLocaleString("en-KE")}`;
