@@ -313,21 +313,31 @@ export default function CustomersPage() {
 
                     {openMenu === customer.id && (
                       <div className="absolute right-6 top-12 z-20 w-44 overflow-hidden rounded-xl border border-gray-200 bg-white py-1 text-left shadow-xl">
-                        <ActionButton
-                          icon={<Eye size={16} />}
-                          label="View Customer"
-                        />
+                        <Link
+                        href={`/customers/${customer.id}`}
+                        onClick={()=> setOpenMenu(null)}
+                        className="flex w-full items-center gap-3 px-4 py-2.5 text-sm text-gray-600 transition hover:bg-[#FOFDF4] hover:text-[#14532D]"
+                        >
+                          <Eye size={16} />
+                          View Customer
+                        </Link>
 
-                        <ActionButton
-                          icon={<Pencil size={16} />}
-                          label="Edit Customer"
-                        />
+                        <Link
+                        href={`/customers/${customer.id}/edit`}
+                        onClick={() => setOpenMenu(null)}
+                        className="flex w-full items-center gap-3 px-4 py-2.5 text-sm text-gray-600 transition hover:bg-[#F0FDF4] hover:text-[#14532D]"
+                        >
+                          <Pencil size={16} />
+                          Edit Customer
+                        </Link>
 
-                        <ActionButton
-                          icon={<Trash2 size={16} />}
-                          label="Delete Customer"
-                          danger
-                        />
+                        <button
+                        onClick={() => deleteCustomer(customer)}
+                        className="flex w-full items-center gap-3 px-4 py-2.5 text-sm text-red-600 transition hover:bg-red-50"
+                        >
+                          <Trash2 size={16} />
+                          Delete Customer
+                        </button>
                       </div>
                     )}
                   </td>
